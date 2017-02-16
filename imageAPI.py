@@ -44,7 +44,7 @@ headers = {
     #'Accept-Encoding': 'gzip, deflate, sdch', # leads to unexpected data
     'Accept-Language': 'zh-CN,zh;q=0.8,en;q=0.6',
     'Cookie': 'BDqhfp=%E7%B4%A2%E9%9A%86%26%260-10-1undefined%26%260%26%261; BIDUPSID=274E948C016A02F123675D5E30FE4A4D; BAIDUID=1E865B2D98CCC978986377AD7C84FD2A:FG=1; PSTM=1467387983; MCITY=-%3A; indexPageSugList=%5B%22%E7%B4%A2%E9%9A%86%22%2C%22%E5%A5%B3%E5%B8%9D%22%5D; cleanHistoryStatus=0; firstShowTip=1; PSINO=5; H_PS_PSSID=1462_21088_18133_22036_21672_22075',
-    'Host': 'image.baidu.com',
+    #'Host': 'image.baidu.com',
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36',
 }
 

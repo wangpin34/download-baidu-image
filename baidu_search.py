@@ -7,16 +7,23 @@ import random
 from characterUtil import encodeURIComponent
 from imageAPI import searchByWord, decodeImageURL, fetchImg
 from file import mkdirIfNonexist
+import ConfigParser
 
-proxy=urllib2.ProxyHandler({'http': 'web-proxy.austin.hp.com:8080'})
-opener = urllib2.build_opener(proxy)
-urllib2.install_opener(opener)
+config = ConfigParser.ConfigParser()
+config.readfp(open('config.ini', "rb"))
+
+proxyHost = config.get('global', 'proxy')
+
+if proxyHost is not None:
+    proxy=urllib2.ProxyHandler({'http': proxyHost})
+    opener = urllib2.build_opener(proxy)
+    urllib2.install_opener(opener)
 
 reload(sys)                      # reload 才能调用 setdefaultencoding 方法
 sys.setdefaultencoding('utf-8')  # 设置 'utf-8'
 
-keyWords = encodeURIComponent('索隆')
-result = searchByWord(keyWords, 0, 1)
+keyWords = encodeURIComponent('娜美')
+result = searchByWord(keyWords, 0, 100)
 result = json.loads(result)
 data = result['data']
 

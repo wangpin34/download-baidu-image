@@ -1,5 +1,7 @@
+.git
 *.pyc
-.png
-.gif
-.jpg
-.jpeg
+*.png
+*.gif
+*.jpg
+*.jpeg
+temp
